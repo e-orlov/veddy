@@ -20,4 +20,13 @@ class VeddyGenerator < Rails::Generators::Base
     # Make sure that this comes before your JavaScript.
     insert_into_file "app/views/layouts/application.html.erb", %Q{\n  <meta name="referrer" content="origin">\n}, after: "<head>"
   end
+
+  def set_up_assets
+    # This initializer will ensure that we don't add the Base64 encoding
+    # to our asset pipeline.
+    template "config/initializers/assets.rb"
+    # To add the Ved Analytics to our asset pipeline, we make sure it is
+    # run first due to the dependency reasons.
+    insert_into_file "app/assets/javascripts/application.js", %Q{//= require ved_analytics/ved_analytics-1.1\n}, before: "//= require jquery"
+  end
 end
