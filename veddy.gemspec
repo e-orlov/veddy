@@ -7,9 +7,9 @@ require "veddy/version"
 Gem::Specification.new do |s|
   s.name        = "veddy"
   s.version     = Veddy::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
+  s.authors     = ["Ben A. Morgan"]
+  s.email       = ["ben@benmorgan.io"]
+  s.homepage    = "https://github.com/BenMorganIO/veddy"
   s.summary     = "TODO: Summary of Veddy."
   s.description = "TODO: Description of Veddy."
   s.license     = "MIT"
