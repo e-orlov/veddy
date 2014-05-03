@@ -25,6 +25,9 @@ class VeddyGenerator < Rails::Generators::Base
     # This initializer will ensure that we don't add the Base64 encoding
     # to our asset pipeline.
     template "config/initializers/assets.rb"
+    # Now that the asset will not be included in the pipeline, we insert
+    # it into the layout just after the closing title tag.
+    insert_into_file "app/views/layouts/application.html.erb", %Q{\n\n  <!--[if lt IE 10]>\n    <script src="http://veddecode.opensource.dpo.org.uk/js/base64-1.1.min.js"></script>\n  <![endif]-->\n}, after: "</title>"
     # To add the Ved Analytics to our asset pipeline, we make sure it is
     # run first due to the dependency reasons.
     insert_into_file "app/assets/javascripts/application.js", %Q{//= require ved_analytics/ved_analytics-1.1\n}, before: "//= require jquery\n"
