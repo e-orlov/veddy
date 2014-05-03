@@ -1,6 +1,9 @@
 class VeddyGenerator < Rails::Generators::Base
+  source_root File.expand_path("../templates", __FILE__)
+
   desc "This generator installs veddy."
   def create_initializer_file
-    create_file "config/initializers/veddy.rb", "# Add initialization content here"
+    template "vendor/assets/javascripts/base64/*"
   end
 end
+
