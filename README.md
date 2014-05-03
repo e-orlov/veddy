@@ -12,7 +12,7 @@ gem 'veddy', group: :development
 
 We install it into the development group because Veddy is really just a generator. Due to this, you will not be using Veddy within your test suite or in your production environment.
 
-To install the neccessary files, run `rails g veddy` and you should b good to go.
+To install the neccessary files, run `rails g veddy` and you should be good to go.
 
 Veddy will create the vendor files for you, exclude Base64 from the asset pipeline, insert them into your layout, and ensure that you can collect data for mobile devices.
 
@@ -24,7 +24,7 @@ Now, Veddy cannot do everything. Here's what you need to know:
 
 Veddy will do this all for you, but just double check and make sure it looks OK. If you're on a brand new Rails application, you probably don't need to worry too much. If it is an already existing Rails app, double-checking is recommended.
 
-## Pumping Up to Universal Analytics
+## Sending Data Up to Universal Analytics
 
 To push the code up to Universal Analytics, please look at the example code below and add it before `ga('send', 'pageview');`
 
@@ -48,4 +48,4 @@ To push the code up to Universal Analytics, please look at the example code belo
 })(window);
 ```
 
-Hope you have fun. Check out [this screencast on Rails TV](http://www.rails.tv/videos/6826983/getting-ved-parameters-from-the-google-search-engine) to find out how to install Ved Parameters without installing Veddy.
+Hope you have fun. Check out [this screencast on Rails TV](http://www.rails.tv/videos/6826983/getting-ved-parameters-from-the-google-search-engine) to find out how to install Ved Parameters without requiring Veddy.
