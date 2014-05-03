@@ -17,6 +17,7 @@ class VeddyGenerator < Rails::Generators::Base
     # Since mobile devices are not able to do hyperlink auditing,
     # (well, they can, just don't expect the average user to turn it on)
     # we insert a meta tag to be able to capture the ved parameter.
+    # Make sure that this comes before your JavaScript.
     insert_into_file "app/views/layouts/application.html.erb", %Q{\n  <meta name="referrer" content="origin">\n}, after: "<head>"
   end
 end
