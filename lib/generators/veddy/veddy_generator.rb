@@ -27,6 +27,6 @@ class VeddyGenerator < Rails::Generators::Base
     template "config/initializers/assets.rb"
     # To add the Ved Analytics to our asset pipeline, we make sure it is
     # run first due to the dependency reasons.
-    insert_into_file "app/assets/javascripts/application.js", %Q{//= require ved_analytics/ved_analytics-1.1\n}, before: "//= require jquery"
+    insert_into_file "app/assets/javascripts/application.js", %Q{//= require ved_analytics/ved_analytics-1.1\n}, before: "//= require jquery\n"
   end
 end
