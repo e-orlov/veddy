@@ -1,6 +1,6 @@
-[![Gem Version](https://badge.fury.io/rb/veddy.svg)](http://badge.fury.io/rb/veddy)
-
 # Veddy
+
+[![Gem Version](https://badge.fury.io/rb/veddy.svg)](http://badge.fury.io/rb/veddy)
 
 Veddy is a Rails generator that will allow you to get the ved parameters from the Google search results. this allows you to escape some of the (not provided) hell.
 
